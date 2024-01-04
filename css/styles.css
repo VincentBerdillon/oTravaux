@@ -1,0 +1,314 @@
+body {
+    background:#eee;
+    font-family: 'Asap', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding-left:250px;
+    background:#fff;
+    box-shadow:0 0 5px rgba(0,0,0,.1);
+    position: relative;
+}
+
+.header {
+    float: left;
+    margin-left: -250px;
+    width: 250px;
+    background: #f5f5f5;
+    border-right: 1px solid rgba(0,0,0,.1);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+}
+
+.search {
+    padding: 1rem;
+    background: #f39c12;
+}
+
+.search-input {
+    padding: .75rem 1rem;
+    border: none;
+    font-size:1.2em;
+    width:100%;
+    border-radius:2rem;
+}
+
+.title {
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom:3px solid #f39c12;
+    padding-bottom:1rem;
+}
+
+.nav {
+    padding: 2rem;
+}
+
+.nav-links {
+    margin-top: 2rem;
+    
+}
+
+.nav-item {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background: #eee;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s linear; 
+}
+
+.nav-links .nav-item:first-child{
+    box-shadow: 0 2px 0px #f39c12;
+}
+
+.nav-item:hover{
+    background-color: #f39c12;
+}
+
+.page {
+    padding: 5rem 2rem 2rem;
+}
+
+.content-focus {
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.content-titles {
+    width: 50%;
+    font-size: 3em;
+    margin-right: 2rem;
+    margin-left: 10rem;
+    border-top: 3px solid #f39c12;
+}
+
+.content-title {
+    max-width: 450px;
+    margin-left: auto;
+    text-align: right;
+}
+
+.content-title--main{
+    font-weight: 700;
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.content-title--sub{
+    font-weight: 700;
+    font-size: 2rem;
+    color: #aaa;
+}
+
+.content-picture {
+    width: 50%;
+    position: relative;
+    z-index: 0;
+}
+
+.rounded {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.picture {
+    width: 100%;
+    display: block;
+}
+
+.picture-desc{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    z-index: 2;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    width: 100%;
+}
+
+.content-quote {
+    border-top: 3px solid #ccc;
+    margin-top: 2rem;
+}
+
+.content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.content h3 {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content ol {
+    list-style-type: decimal;
+    font-size: 1.1em;
+    margin-left: 1.5em;
+    line-height: 1.5;
+}
+
+.articles {
+    margin-top: 5rem;
+}
+
+.articles-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    justify-content: space-between;
+}
+
+.card {
+    /* margin-bottom: 2rem; */
+    width: 49%;
+}
+
+.card-title {
+    margin: 2rem 1rem;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 0 1rem;
+}
+
+.card-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.card-footer {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: 3px solid #f39c12;
+    color: #f39c12;
+    border-radius: 5rem;
+    font-weight: 700;
+    margin-right: 1rem;
+    transition: background 0.3s linear, color 0.3s linear;
+}
+
+.btn:hover{
+    background: #f39c12;
+    color: #fff;
+}
+
+
+.footer {
+    background: #111;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: #aaa;
+}
+
+/*
+    Styles pour les écrans de moins de 1200px de large :
+*/
+
+
+@media screen and (max-width: 1199px) {
+
+    .content-focus {
+        display:block;
+    }
+
+    .content-titles {
+        width: auto;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .content-title {
+        max-width: none;
+    }
+
+    .content-picture {
+        width: auto;
+    }
+
+    .articles-container {
+      
+        display:block;
+    }
+    .card {
+        width:auto;
+    }
+
+}
+    
+
+
+/*
+    Styles pour les écrans de moins de 900px de large :
+*/
+
+@media screen and (max-width: 899px) {
+    .header {
+        position:static;
+        width:auto;
+        float:none;
+        margin-left:0;
+    }
+
+    .container {
+        width:96%;
+        padding-left:0;
+    }
+
+    .page {
+        padding: 0 1rem;
+    }
+
+    .nav {
+        padding: 1rem;
+    }
+
+    .nav .title {
+        display:none;
+    }
+
+    .nav-links {
+        margin-top:0;
+    }
+
+    .nav-item {
+        width:calc(33.3333% - .5rem);
+        text-align: center;
+        display: inline-block;
+    }
+
+    .header{
+        height: auto;
+    }
+    .nav-item-link {
+        margin-bottom: 0;
+    }
+
+}
